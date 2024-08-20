@@ -12,7 +12,7 @@ import Grid from '@mui/material/Grid';
 import Paper from '@mui/material/Paper';
 import { Menu } from '@mui/icons-material';
 import {
-    addTodolistAC,
+    addTodolistAC, addTodoTC,
     changeTodolistFilterAC,
     changeTodolistTitleAC,
     FilterValuesType, getTodoTC,
@@ -78,8 +78,8 @@ function App() {
     }, []);
 
     const addTodolist = useCallback((title: string) => {
-        const action = addTodolistAC(title);
-        dispatch(action);
+
+        dispatch(addTodoTC(title));
     }, [dispatch]);
 
     useEffect(() => {
