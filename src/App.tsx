@@ -15,8 +15,8 @@ import {
     addTodolistAC,
     changeTodolistFilterAC,
     changeTodolistTitleAC,
-    FilterValuesType, getTodoThunk,
-    removeTodolistAC, setTodoListAC,
+    FilterValuesType, getTodoTC,
+    removeTodolistAC,
     TodolistDomainType
 } from './state/todolists-reducer'
 import { addTaskAC, changeTaskStatusAC, changeTaskTitleAC, removeTaskAC } from './state/tasks-reducer';
@@ -77,7 +77,7 @@ function App() {
     }, [dispatch]);
 
     useEffect(() => {
-        dispatch(getTodoThunk)
+        dispatch(getTodoTC())
     }, []);
 
     return (
